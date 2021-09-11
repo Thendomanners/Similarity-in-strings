@@ -1,4 +1,3 @@
-//THENDO MASUVHELELE     MAIL: MANNERS342@GMAIL.COM 
 // This program Calculate the match percentage between two peoples first names
 //import {createReadStream} from "fs";
     //first name input
@@ -52,6 +51,16 @@ let csvWriter = require('csv-writer').createObjectCsvWriter({
         {id: 'm', title: 'Male'},
     ]
 });
+// sorting alphabetically
+const ascending = data.sort((inputName1, inputName2) => inputName1[field].localeCompare(inputName2[field]))
+objArray.sort(function (inputName1,inputName2) {
+    return inputName1.localeCompare(inputName2);
+
+})
+
+function removeDuplicate(array){
+    return array.filter((inputName1,inputName2)=> array.indexOf(inputName1)=== b)
+};
 
 //creating a variable for data write
 let inform= [];
@@ -64,3 +73,4 @@ let data = "writing a file "
 fs.writeFile('output.txt',data,(err)=>
 {if (err) throw err;
 })
+
